@@ -1,5 +1,5 @@
 {
-    "name": "@alongw/tool",
+    "name": "alongw-tool",
     "version": "1.0.0",
     "description": "alongw-tool",
     "main": "dist/out/app.js",
@@ -7,7 +7,6 @@
     "author": "alongw <alongw@alongw.cn>",
     "license": "AGPL-3.0",
     "type": "module",
-    "private": "false",
     "scripts": {
         "lint": "eslint .",
         "format": "prettier --write --cache .",
