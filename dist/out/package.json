@@ -20,7 +20,7 @@
         "start": "yarn start:ts",
         "start:ts": "ts-node-esm --experimental-specifier-resolution=node src/app.ts",
         "start:node": "node --es-module-specifier-resolution=node dist/app.js",
-        "publish": "yarn publish --access public"
+        "publish": "yarn build && yarn publish --access public"
     },
     "devDependencies": {
         "@types/fs-extra": "^11.0.4",
