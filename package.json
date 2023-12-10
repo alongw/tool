@@ -1,6 +1,6 @@
 {
     "name": "@niajs/tool",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "alongw-tool",
     "main": "dist/out/app.js",
     "repository": "https://github.com/alongw/tool",
