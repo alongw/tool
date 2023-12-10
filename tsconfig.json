@@ -12,7 +12,8 @@
       "baseUrl": "src",
       "typeRoots": ["node_modules/@types"],
       "types": ["node"],
-      "skipLibCheck": true
+      "skipLibCheck": true,
+      "declaration": true
     },
     "include": ["src/**/*"]
   }
