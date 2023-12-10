@@ -1,6 +1,6 @@
 {
     "name": "@niajs/tool",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "alongw-tool",
     "main": "dist/out/app.js",
     "repository": "https://github.com/alongw/tool",
@@ -19,8 +19,7 @@
         "build:nolint": "npx ts-node ./script/build.ts",
         "start": "yarn start:ts",
         "start:ts": "ts-node-esm --experimental-specifier-resolution=node src/app.ts",
-        "start:node": "node --es-module-specifier-resolution=node dist/app.js",
-        "publish": "yarn publish --access public"
+        "start:node": "node --es-module-specifier-resolution=node dist/app.js"
     },
     "devDependencies": {
         "@types/fs-extra": "^11.0.4",

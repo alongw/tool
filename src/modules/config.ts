@@ -24,7 +24,4 @@ const getConfig = <T>(): Config<T> | undefined => {
     return configData
 }
 
-export default {
-    setConfig,
-    getConfig
-}
+export { setConfig, getConfig }

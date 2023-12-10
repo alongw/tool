@@ -1,5 +1,3 @@
-import config from './modules/config'
+import { getConfig, setConfig } from './modules/config'
 
-export default {
-    config
-}
+export { getConfig, setConfig }
