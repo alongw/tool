@@ -1,3 +1,3 @@
-import { getConfig, setConfig } from './modules/config'
+import { useConfig } from './modules/config'
 
-export { getConfig, setConfig }
+export { useConfig }

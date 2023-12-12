@@ -2819,13 +2819,29 @@ var lib_default = /*#__PURE__*/__nccwpck_require__.n(lib);
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let configData = null;
-const setConfig = (path, encoding = 'utf-8') => {
+/**
+ * 初始化配置文件（设置配置文件路径）
+ * @param {string} path - 配置文件路径
+ * @param {BufferEncoding} encoding - 配置文件编码（可选，默认为 utf-8）
+ * @param {string} data - 默认配置文件内容（可选，如果不传，则不会创建）
+ * @returns {boolean} 如果为 true 则设置成功，如果为 false 则设置失败，创建新的配置文件
+ *
+ * @example
+ * import { setConfig } from '@niajs/tool'
+ * setConfig('./config.json' )
+ */
+const setConfig = (path, encoding = 'utf-8', data) => {
     try {
         lib_default().readFileSync(path, {
             encoding: encoding
         });
     }
     catch (error) {
+        if (data) {
+            lib_default().outputFileSync(path, data, {
+                encoding: encoding
+            });
+        }
         return false;
     }
     configData = lib_default().readFileSync(path, {
@@ -2833,6 +2849,10 @@ const setConfig = (path, encoding = 'utf-8') => {
     });
     return true;
 };
+/**
+ * 获取配置文件，如果配置文件不存在，则返回 undefined
+ * @returns {Config<T> | undefined} 配置文件
+ */
 const getConfig = () => {
     return configData;
 };
